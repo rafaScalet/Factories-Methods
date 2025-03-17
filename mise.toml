@@ -1,0 +1,3 @@
+[tasks.exec-factory-method]
+run = "java -cp dist factoryMethod.Main"
+description = "runs the factory method example"
