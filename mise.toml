@@ -1,3 +1,11 @@
 [tasks.exec-factory-method]
 run = "java -cp dist factoryMethod.Main"
 description = "runs the factory method example"
+
+[tasks.exec-abstract-factory]
+run = "java -cp dist abstractFactory.Main"
+description = "runs the abstract Factory example"
+
+[tasks.build]
+run = "javac -d dist ./src/**/*"
+description = "build this project"
