@@ -1,11 +1,31 @@
 [tasks.exec-factory-method]
 run = "java -cp dist factoryMethod.Main"
-description = "runs the factory method example"
+description = "run the factory method example"
 
 [tasks.exec-abstract-factory]
 run = "java -cp dist abstractFactory.Main"
-description = "runs the abstract Factory example"
+description = "run the abstract Factory example"
+
+[tasks.exec-main]
+run = "java -cp dist Main"
+description = "run the main class, in this case is a 'interface'"
 
 [tasks.build]
 run = "javac -d dist ./src/**/*"
 description = "build this project"
+
+[tasks.exec-jar-abstract-factory]
+run = 'java -jar "$(basename "$PWD")".jar "Abstract Factory"'
+description = "run the .jar using the abstract factory option"
+
+[tasks.exec-jar-factory-method]
+run = 'java -jar "$(basename "$PWD")".jar "Factory Method"'
+description = "run the .jar using the factory method option"
+
+[tasks.exec-jar-main]
+run = 'java -jar "$(basename "$PWD")".jar'
+description = "run the .jar without passing an argument"
+
+[tasks.build-jar]
+run = 'jar cfm "$(basename "$PWD").jar" MANIFEST.mf -C dist .'
+description = "generate a .jar for this project"
