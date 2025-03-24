@@ -1,4 +1,11 @@
 {
   "java.project.sourcePaths": ["src"],
   "java.project.outputPath": "dist",
+  "files.exclude": {
+    "**/.git": false,
+    "**/.svn": false,
+    "**/.hg": false,
+    "**/.DS_Store": false,
+    "**/Thumbs.db": false
+  },
 }
